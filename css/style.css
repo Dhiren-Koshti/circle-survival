@@ -1,0 +1,327 @@
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    height: 100vh; /* Set body height to full viewport height */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #f0f0f0; /* Optional: Set a background color */
+}
+
+/* Modal custom style */
+#myModal .modal-content {
+    position: relative; /* Make position relative to contain overlay */
+    background-image: url('../css/images/form_background.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 18px;
+    color: hsl(0, 0%, 88%)   ;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Overlay */
+#myModal .modal-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    border-radius: 15px; /* Match border radius of modal */
+    z-index: 1; /* Ensure overlay is below the text */
+}
+
+#myModal .modal-content > * {
+    position: relative; /* Position elements relative to the overlay */
+    z-index: 2; /* Ensure elements are above the overlay */
+}
+
+/* Header style */
+#myModal .modal-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+#myModal .modal-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#myModal .close {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Checkbox and label styles */
+#myModal input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+#myModal label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#myModal .modal-body {
+    padding: 15px;
+}
+
+/* Input field style */
+#myModal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0;
+    transition: border 0.3s ease, background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for input */
+    color: #333;
+}
+
+#myModal input[type="text"]:focus {
+    background-color: #fff;
+    border: 2px solid #ff8c00;
+    outline: none;
+}
+
+/* Footer style */
+#myModal .modal-footer {
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button styles */
+#myModal .btn-primary {
+    background-color: #ff4081;
+    border-color: #ff4081;
+    transition: background-color 0.3s ease;
+}
+
+#myModal .btn-primary:hover {
+    background-color: #d5006d;
+    border-color: #d5006d;
+}
+
+#myModal .btn-secondary {
+    background-color: #ff8c00;
+    border-color: #ff8c00;
+    transition: background-color 0.3s ease;
+}
+
+#myModal .btn-secondary:hover {
+    background-color: #ff6f00;
+    border-color: #ff6f00;
+}
+
+/* Modal-2 background */
+#myModal2.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1051; /* Higher z-index to ensure it is above other modals */
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); /* Dark background with transparency */
+}
+
+/* Modal-2 dialog */
+#myModal2 .modal-dialog {
+    margin: auto;
+    max-width: 600px;
+}
+
+/* Modal-2 content */
+#myModal2 .modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* Modal-2 header */
+#myModal2 .modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Modal-2 title */
+#myModal2 .modal-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Modal-2 game rules styling */
+#myModal2 .modal-body {
+    padding: 20px;
+}
+
+#myModal2 .modal-body h1 {
+    font-size: 24px;
+    color: #ff5733;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#myModal2 .modal-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#myModal2 .modal-body li {
+    font-size: 18px;
+    margin: 15px 0;
+    padding-left: 35px;
+    position: relative;
+    color: #555;
+}
+
+#myModal2 .modal-body li::before {
+    content: "⚡"; 
+    color: #ff5733;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+}
+
+/* Modal-2 button styling */
+#myModal2 .btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#myModal2 .btn-primary:hover {
+    background-color: #218838;
+}
+
+.big-box {
+    margin: 10px; /* Small margin of 10px from every side */
+    background-color: #ffffff; /* Background color of the box */
+    border: 3px solid #007bff; /* Optional: Border for the box */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    width: calc(100% - 20px); /* Full width minus the left and right margins */
+    height: calc(100% - 20px); /* Full height minus the top and bottom margins */
+    background: linear-gradient(135deg, #f6d365, #fda085, #f093fb, #4facfe);
+    background-size: 200% 200%;
+    animation: gradientAnimation 8s ease infinite;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.circle{
+    border: 5px solid #000;
+    border-radius: 50%;
+    position: fixed;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Modal3  */
+#myModal3.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1); /* Dark semi-transparent background */
+}
+
+/* Modal Dialog */
+#myModal3 .modal-dialog {
+    margin: 100px auto;
+    max-width: 500px;
+    transition: transform 0.3s ease-out;
+}
+
+/* Modal Content */
+#myModal3 .modal-content {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Subtle gradient for a modern look */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    position: relative;
+}
+
+/* Modal Header */
+#myModal3 .modal-header {
+    border-bottom: none; /* No border for cleaner look */
+    text-align: center;
+}
+
+#myModal3 .modal-title {
+    font-size: 1.8rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #ff5733; /* Eye-catching color for the title */
+}
+
+/* Alert Box Styling */
+#myModal3 .alert {
+    background: linear-gradient(135deg, #ff4757, #ff6b81); /* Gradient for the alert */
+    color: #ffffff; /* White text */
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 15px;
+}
+
+#myModal3 .alert-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Modal Footer */
+#myModal3 .modal-footer {
+    border-top: none; /* No border to keep it minimal */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* Button Styling */
+#myModal3 .btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#myModal3 .btn-primary:hover {
+    background-color: #218838;
+}
+
+/* Button Focus Style */
+#myModal3 .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+}

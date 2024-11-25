@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Game</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Game Settings</h5>
+                </div>
+                <form action="" id="myForm" autocomplete="off">
+                    <div class="modal-body">
+                        <div>
+                            <input type="checkbox" name="P1" checked style="pointer-events: none; opacity: 0.6;"> <label>Player 1</label><br>
+                            <input type="checkbox" name="P2" checked style="pointer-events: none; opacity: 0.6;"> <label>Player 2</label><br>
+                        </div>
+                        <hr style="border-color: white;">
+                        <label for="">Min size of circle</label>
+                        <input type="text" placeholder="Enter min size" value="20" name="min"><br>
+                        <p style="color: goldenrod;display: none;" id="minErr">Please enter a valid number between 20 and 200</p>
+                        <label for="">Max size of circle</label>
+                        <input type="text" placeholder="Enter max size"  value="200" name="max">
+                        <p style="color: goldenrod;display: none;" id="maxErr">Please enter a valid number between 20 and 200</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Apply</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2-->
+    <div id="myModal2" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                </div>
+                <form action="" id="myForm2" autocomplete="off">
+                    <div class="modal-body">
+                        <h1>Game Rules</h1>
+                        <ul>
+                            <li>If your circle moves outside the box, you're <strong>Out!</strong></li>
+                            <li>If your circle <strong>collides</strong> with another circle, you're <strong>Out!</strong></li>
+                            <li>If one circle enters inside another circle, you're <strong>Out!</strong></li>
+                            <li>Stay inside and avoid collisions to survive the game!</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" id="rules">Start Game</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Box -->
+    <div class="big-box">
+    </div>
+
+    <!-- Modal 3-->
+    <div id="myModal3" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                </div>
+                <form action="" id="myForm3" autocomplete="off">
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Game Over</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" id="rules">New Game</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+       
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
