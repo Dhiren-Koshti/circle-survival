@@ -11,7 +11,7 @@ body {
 /* Modal custom style */
 #myModal .modal-content {
     position: relative; /* Make position relative to contain overlay */
-    background-image: url('../css/images/form_background.jpg');
+    background-image: url('../images/form_background.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 18px;
