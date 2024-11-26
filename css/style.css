@@ -224,6 +224,7 @@ body {
     animation: gradientAnimation 8s ease infinite;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 @keyframes gradientAnimation {
@@ -324,4 +325,23 @@ body {
 #myModal3 .btn-primary:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 576px) {
+    #myModal .modal-dialog,
+    #myModal2 .modal-dialog,
+    #myModal3 .modal-dialog {
+        max-width: 95%;
+        margin: 10px auto;
+    }
+}
+
+/* Adjust for larger mobile screens (tablets and phablets) */
+@media (max-width: 768px) {
+    #myModal .modal-dialog,
+    #myModal2 .modal-dialog,
+    #myModal3 .modal-dialog {
+        max-width: 85%;
+    }
 }
