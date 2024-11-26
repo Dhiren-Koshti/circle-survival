@@ -335,6 +335,18 @@ body {
         max-width: 95%;
         margin: 10px auto;
     }
+
+    #myModal2 .modal-body h1 {
+        font-size: 20px;
+    }
+
+    #myModal2 .modal-body li {
+        font-size: 11px;
+    }
+    
+    #myModal2 .modal-body li::before {
+        font-size: 15px;
+    }
 }
 
 /* Adjust for larger mobile screens (tablets and phablets) */
